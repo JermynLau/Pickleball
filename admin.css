@@ -1,0 +1,71 @@
+```css
+/* Admin panel specific styles */
+.admin-section {
+    display: none;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.admin-section.active {
+    display: block;
+}
+
+.admin-form {
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+#addCourtBtn, #addClassBtn {
+    background-color: #28a745;
+    margin-top: 1rem;
+}
+
+#court-bookings-list, #class-list, #members-list {
+    margin-top: 1rem;
+}
+
+.booking-item, .class-item, .member-item {
+    background-color: #f8f9fa;
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.booking-item .actions button, 
+.class-item .actions button,
+.member-item .actions button {
+    margin-left: 0.5rem;
+}
+
+.cancel-btn {
+    background-color: #dc3545;
+}
+
+.edit-btn {
+    background-color: #ffc107;
+    color: #212529;
+}
+
+nav .admin-tab.active {
+    background-color: #3498db;
+    border-radius: 4px;
+}
+```

@@ -1,0 +1,73 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HK Pickleball Group</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>HK Pickleball Group</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="calendar.html">Book Courts</a></li>
+                <li><a href="classes.html">Classes</a></li>
+                <li><a href="#" id="loginBtn">Login</a></li>
+                <li><a href="#" id="registerBtn">Register</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h2>Welcome to HK Pickleball</h2>
+            <p>Join our community and book courts or classes with ease!</p>
+        </section>
+
+        <section class="upcoming">
+            <h2>Upcoming Events</h2>
+            <div id="events-container">
+                <!-- Events will be loaded dynamically -->
+                <p>Loading upcoming events...</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 HK Pickleball Group</p>
+    </footer>
+
+    <!-- Authentication Modal -->
+    <div id="authModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="loginForm">
+                <h2>Login</h2>
+                <input type="email" id="loginEmail" placeholder="Email">
+                <input type="password" id="loginPassword" placeholder="Password">
+                <button id="loginSubmit">Login</button>
+                <p>Don't have an account? <a href="#" id="switchToRegister">Register</a></p>
+            </div>
+            <div id="registerForm" style="display:none;">
+                <h2>Register</h2>
+                <input type="text" id="registerName" placeholder="Full Name">
+                <input type="email" id="registerEmail" placeholder="Email">
+                <input type="password" id="registerPassword" placeholder="Password">
+                <input type="tel" id="registerPhone" placeholder="Phone Number">
+                <button id="registerSubmit">Register</button>
+                <p>Already have an account? <a href="#" id="switchToLogin">Login</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore-compat.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
+```

@@ -1,0 +1,121 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - HK Pickleball Group</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <header>
+        <h1>HK Pickleball Admin</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#" class="admin-tab active" data-tab="courts">Court Management</a></li>
+                <li><a href="#" class="admin-tab" data-tab="classes">Classes</a></li>
+                <li><a href="#" class="admin-tab" data-tab="members">Members</a></li>
+                <li><a href="#" id="logoutBtn">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="admin-panel">
+        <section id="courts-section" class="admin-section active">
+            <h2>Court Management</h2>
+            
+            <div class="admin-form">
+                <h3>Add Available Court Time</h3>
+                <div class="form-group">
+                    <label for="courtDate">Date:</label>
+                    <input type="date" id="courtDate">
+                </div>
+                <div class="form-group">
+                    <label for="courtTime">Time:</label>
+                    <input type="time" id="courtTime">
+                </div>
+                <div class="form-group">
+                    <label for="courtLocation">Location:</label>
+                    <input type="text" id="courtLocation" placeholder="e.g., Victoria Park">
+                </div>
+                <div class="form-group">
+                    <label for="courtCount">Number of Courts:</label>
+                    <input type="number" id="courtCount" min="1" max="10" value="1">
+                </div>
+                <div class="form-group">
+                    <label for="courtDuration">Duration (hours):</label>
+                    <input type="number" id="courtDuration" min="1" max="4" value="1">
+                </div>
+                <button id="addCourtBtn">Add Court Availability</button>
+            </div>
+            
+            <h3>Current Court Bookings</h3>
+            <div id="court-bookings-list">
+                <!-- Bookings will load here -->
+                <p>Loading bookings...</p>
+            </div>
+        </section>
+        
+        <section id="classes-section" class="admin-section">
+            <h2>Class Management</h2>
+            
+            <div class="admin-form">
+                <h3>Add New Class</h3>
+                <div class="form-group">
+                    <label for="className">Class Name:</label>
+                    <input type="text" id="className" placeholder="e.g., Beginners Pickleball">
+                </div>
+                <div class="form-group">
+                    <label for="classDate">Date:</label>
+                    <input type="date" id="classDate">
+                </div>
+                <div class="form-group">
+                    <label for="classTime">Time:</label>
+                    <input type="time" id="classTime">
+                </div>
+                <div class="form-group">
+                    <label for="classLocation">Location:</label>
+                    <input type="text" id="classLocation" placeholder="Indoor Court">
+                </div>
+                <div class="form-group">
+                    <label for="classCapacity">Maximum Capacity:</label>
+                    <input type="number" id="classCapacity" min="1" max="20" value="8">
+                </div>
+                <div class="form-group">
+                    <label for="classDuration">Duration (hours):</label>
+                    <input type="number" id="classDuration" min="1" max="3" value="1">
+                </div>
+                <button id="addClassBtn">Add Class</button>
+            </div>
+            
+            <h3>Current Classes</h3>
+            <div id="class-list">
+                <!-- Classes will load here -->
+                <p>Loading classes...</p>
+            </div>
+        </section>
+        
+        <section id="members-section" class="admin-section">
+            <h2>Member Management</h2>
+            <div id="members-list">
+                <!-- Members will load here -->
+                <p>Loading members...</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 HK Pickleball Group - Admin Panel</p>
+    </footer>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore-compat.js"></script>
+    <script src="app.js"></script>
+    <script src="admin.js"></script>
+</body>
+</html>
+```

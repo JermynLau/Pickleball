@@ -1,0 +1,58 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Courts - HK Pickleball Group</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>HK Pickleball Group</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="calendar.html">Book Courts</a></li>
+                <li><a href="classes.html">Classes</a></li>
+                <li><a href="#" id="loginBtn">Login</a></li>
+                <li><a href="#" id="accountBtn" style="display:none;">My Account</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Court Bookings</h2>
+        
+        <div class="calendar-controls">
+            <button id="prevMonth">&lt; Previous</button>
+            <h3 id="currentMonth">October 2025</h3>
+            <button id="nextMonth">Next &gt;</button>
+        </div>
+        
+        <div id="calendar-container">
+            <!-- Calendar will be generated dynamically -->
+        </div>
+        
+        <div id="booking-details" style="display:none;">
+            <h3>Book a Court</h3>
+            <p>Date: <span id="selected-date"></span></p>
+            <p>Time: <span id="selected-time"></span></p>
+            <p>Court: <span id="selected-court"></span></p>
+            <button id="confirmBooking">Confirm Booking</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 HK Pickleball Group</p>
+    </footer>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore-compat.js"></script>
+    <script src="app.js"></script>
+    <script src="calendar.js"></script>
+</body>
+</html>
+```
