@@ -1,4 +1,3 @@
-```javascript
 // Calendar functionality
 document.addEventListener('DOMContentLoaded', function() {
     // Calendar elements
@@ -233,4 +232,3 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initial load
     fetchAvailableCourts();
 });
-```
